@@ -1,11 +1,11 @@
 <?php
 
-if( (!isset($_GET['callback'])) || (empty($_GET['callback'])) ){ //jeżeli w GET (w adresie wysyłanym pod ten adres) nie będzie callback 
-    //lub bedzie sam callback http://eduweb.dev/get_data.php?callback-showData
-    header('HTTP/1.0 404 Not Found'); //zwróć ten nagłówek
-    die();
+// if( (!isset($_GET['callback'])) || (empty($_GET['callback'])) ){ //jeżeli w GET (w adresie wysyłanym pod ten adres) nie będzie callback 
+//     //lub bedzie sam callback http://eduweb.dev/get_data.php?callback-showData
+//     header('HTTP/1.0 404 Not Found'); //zwróć ten nagłówek
+//     die();
 
-}
+// }
 
 // Dane pobierane z bazy danych
 $data = array(
@@ -26,4 +26,4 @@ header('Content-Type: text/javascript');
 ?>
 
 
-<?php echo $_GET['callback']; ?>(<?php echo json_encode($data); ?>);
+<?php echo $_GET['callback']; ?>(<?php /*echo json_encode($data); */?>);
